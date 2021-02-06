@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <div>
+        <div>
+          <div>
+            <h3>Cadastre de pessoas</h3>
+          </div>
+        </div>
+  
+        <div>
+          <form method="POST" action="/">
+            <label>Nome</label>
+            <input type="text" name="nome" required /> <br><br>
+  
+            <Label>Idade</Label>
+            <input type="text" name="idade" required /> <br><br>
+
+  
+            <Button>Enviar</Button>
+          </form>
+        </div>
+      </div>
+    </div>
+  
+    <br><br>
+
+    <hr>
+
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Nome:
+                </th>
+                <th>
+                    Idade:
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <% pessoas.forEach(item=>{ %>
+            <tr>
+                <td>
+                    <%= item.nome %>
+                </td>
+                <td>
+                    <%= item.idade %>
+                </td>
+            </tr>
+
+
+            <%   }); %>
+            
+        </tbody>
+    </table>
+</body>
+</html>
